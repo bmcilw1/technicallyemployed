@@ -1,6 +1,6 @@
 <script>
   // src/routes/__layout.svelte
-  import '/static/app.css';
+  import '../app.css';
 </script>
 
 <h1>Welcome to SvelteKit</h1>
