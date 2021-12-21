@@ -14,7 +14,7 @@
     @apply text-xl font-bold mb-2;
   }
   a {
-    @apply text-pink-400 underline;
+    @apply text-pink-400;
   }
   body {
     @apply bg-gray-800 text-white;
