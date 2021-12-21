@@ -9,7 +9,7 @@
 </script>
 
 <script lang="ts">
-  export let errorMessage;
+  export let errorMessage: any;
 </script>
 
 <h1>Error</h1>
