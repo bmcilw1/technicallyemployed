@@ -97,7 +97,7 @@
   </div>
 
   <!-- Mobile menu, show/hide based on menu state. -->
-  <div class:hidden={!expandMenu} class="sm:hidden" id="mobile-menu">
+  <div hidden={!expandMenu} class="sm:hidden" id="mobile-menu">
     <div class="px-2 pt-2 pb-3 space-y-1">
       {#each navItems as navItem}
         <a
