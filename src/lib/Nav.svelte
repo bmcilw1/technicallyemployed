@@ -4,13 +4,7 @@
   let expandMenu = false;
   const toggleExpandMenu = () => (expandMenu = !expandMenu);
 
-  // List of navigation items
-  const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
-    { label: 'Blog', href: '/blog' },
-    { label: 'Coins', href: '/coins' },
-  ];
+  export let navItems: Array<{ label: string, href: string}>;
 </script>
 
 <!-- This example requires Tailwind CSS v2.0+ -->
