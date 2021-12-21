@@ -1,4 +1,4 @@
-<section class="container prose">
+<section>
   <h3>Legal Usage</h3>
 
   <p>This site provides material for informational and entertainment purposes only.</p>
