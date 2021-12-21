@@ -1,6 +1,7 @@
 <script lang="ts">
-  let expandMenu = false;
+  import { page } from '$app/stores';
 
+  let expandMenu = false;
   const toggleExpandMenu = () => (expandMenu = !expandMenu);
 
   // List of navigation items
@@ -82,7 +83,9 @@
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a
               href="/"
-              class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+              class="{$page.path === '/'
+                ? 'bg-gray-900'
+                : 'text-gray-300 hover:bg-gray-700 hover:text-white'} text-white px-3 py-2 rounded-md text-sm font-medium"
               aria-current="page">Home</a
             >
             <a
