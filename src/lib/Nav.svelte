@@ -6,6 +6,7 @@
 
   // List of navigation items
   const navItems = [
+    { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
     { label: 'Blog', href: '/blog' },
     { label: 'Coins', href: '/coins' },
@@ -98,30 +99,15 @@
   <!-- Mobile menu, show/hide based on menu state. -->
   <div class:hidden={!expandMenu} class="sm:hidden" id="mobile-menu">
     <div class="px-2 pt-2 pb-3 space-y-1">
-      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-      <a
-        href="/"
-        class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-        aria-current="page">Home</a
-      >
-
-      <a
-        href="about"
-        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-        >About</a
-      >
-
-      <a
-        href="blog"
-        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-        >Blog</a
-      >
-
-      <a
-        href="coins"
-        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-        >Coins</a
-      >
+      {#each navItems as navItem}
+        <a
+          href={navItem.href}
+          class="{$page.path === navItem.href
+            ? 'bg-gray-900'
+            : 'text-gray-300 hover:bg-gray-700 hover:text-white'} text-white block px-3 py-2 rounded-md text-base font-medium"
+          aria-current="page">{navItem.label}</a
+        >
+      {/each}
     </div>
   </div>
 </nav>
