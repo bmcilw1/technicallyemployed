@@ -6,9 +6,9 @@
 
   // List of navigation items
   const navItems = [
-    { label: 'About', href: 'about' },
-    { label: 'Blog', href: 'blog' },
-    { label: 'Coins', href: 'coins' },
+    { label: 'About', href: '/about' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'Coins', href: '/coins' },
   ];
 </script>
 
@@ -80,28 +80,15 @@
         </div>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-4">
-            <a
-              href="/"
-              class="{$page.path === '/'
-                ? 'bg-gray-900'
-                : 'text-gray-300 hover:bg-gray-700 hover:text-white'} text-white px-3 py-2 rounded-md text-sm font-medium"
-              aria-current="page">Home</a
-            >
-            <a
-              href="about"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >About</a
-            >
-            <a
-              href="blog"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >Blog</a
-            >
-            <a
-              href="coins"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >Coins</a
-            >
+            {#each navItems as navItem}
+              <a
+                href={navItem.href}
+                class="{$page.path === navItem.href
+                  ? 'bg-gray-900'
+                  : 'text-gray-300 hover:bg-gray-700 hover:text-white'} text-white px-3 py-2 rounded-md text-sm font-medium"
+                aria-current="page">{navItem.label}</a
+              >
+            {/each}
           </div>
         </div>
       </div>
