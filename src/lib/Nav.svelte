@@ -1,3 +1,18 @@
+<script lang="ts">
+  import { onMount } from 'svelte';
+
+  let expandMenu = false;
+
+  const toggleExpandMenu = () => (expandMenu = !expandMenu);
+
+  // List of navigation items
+  const navItems = [
+    { label: 'About', href: 'about' },
+    { label: 'Blog', href: 'blog' },
+    { label: 'Coins', href: 'coins' },
+  ];
+</script>
+
 <!-- This example requires Tailwind CSS v2.0+ -->
 <nav class="bg-gray-800">
   <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -9,6 +24,9 @@
           class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
           aria-controls="mobile-menu"
           aria-expanded="false"
+          on:click={() => {
+            toggleExpandMenu();
+          }}
         >
           <span class="sr-only">Open main menu</span>
           <!--
@@ -19,7 +37,7 @@
             Menu open: "hidden", Menu closed: "block"
           -->
           <svg
-            class="block h-6 w-6"
+            class="{expandMenu ? 'hidden' : 'block'} h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -41,7 +59,7 @@
             Menu open: "block", Menu closed: "hidden"
           -->
           <svg
-            class="hidden h-6 w-6"
+            class="{expandMenu ? 'block' : 'hidden'} h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
