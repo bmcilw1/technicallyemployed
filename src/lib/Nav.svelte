@@ -70,17 +70,17 @@
               aria-current="page">Home</a
             >
             <a
-              href="/about"
+              href="about"
               class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >About</a
             >
             <a
-              href="/blog"
+              href="blog"
               class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >Blog</a
             >
             <a
-              href="/coins"
+              href="coins"
               class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >Coins</a
             >
@@ -101,19 +101,19 @@
       >
 
       <a
-        href="/about"
+        href="about"
         class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
         >About</a
       >
 
       <a
-        href="/blog"
+        href="blog"
         class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
         >Blog</a
       >
 
       <a
-        href="/coins"
+        href="coins"
         class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
         >Coins</a
       >
