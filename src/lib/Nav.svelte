@@ -1,10 +1,10 @@
 <script lang="ts">
   import { page } from '$app/stores';
 
+  export let navItems: Array<{ label: string; href: string }>;
+
   let expandMenu = false;
   const toggleExpandMenu = () => (expandMenu = !expandMenu);
-
-  export let navItems: Array<{ label: string, href: string}>;
 </script>
 
 <!-- This example requires Tailwind CSS v2.0+ -->
