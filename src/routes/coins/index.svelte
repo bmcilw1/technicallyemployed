@@ -26,7 +26,7 @@
   export let posts;
 </script>
 
-<!-- <PageHead title="Home" description="An awesome blog about development with Svelte" /> -->
+<PageHead title="Home" description="An awesome blog about development with Svelte" />
 
 <p>
   This is a minimalistic example of a blog built with <a href="https://kit.svelte.dev">SvelteKit</a>
