@@ -28,9 +28,9 @@
   export let post;
 </script>
 
-<PageHead title={post.title} description={post.description} />
+<PageHead title={post.name} description={post.ticker} />
 
-<ArticleTitle title={post.title} />
-<ArticleMeta author={post.author} date={post.date} />
+<ArticleTitle title={post.name} />
+<ArticleMeta author={post.name} date={post.date} />
 
 <slot />
