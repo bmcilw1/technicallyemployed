@@ -37,6 +37,8 @@
 {#each posts as { slug, name, ticker, date }}
   <Article>
     <ArticleTitle {slug} title={name} />
+    <ArticleMeta author="Brian McIlwain" {date} />
+    <ArticleDescription description={name} {slug} />
   </Article>
 {/each}
 
