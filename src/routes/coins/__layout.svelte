@@ -3,7 +3,7 @@
    * @type {import('@sveltejs/kit').Load}
    */
   export async function load({ url, fetch }) {
-    const post = await fetch(`${url?.pathname}.json`).then((res) => res.json());
+    const post = await fetch(`${url?.pathname}.json`).then((res) => res?.json());
 
     if (!post) {
       return {
@@ -30,7 +30,7 @@
 
 <PageHead title={post.name} description={post.ticker} />
 
-<!-- <ArticleTitle title={post.name} />
-<ArticleMeta author={post.name} date={post.date} /> -->
+<ArticleTitle title={post.name} />
+<ArticleMeta author={post.name} date={post.date} />
 
 <slot />
