@@ -48,4 +48,4 @@ date: 2021-03-02
 
 ## Additional Resources
 
-- A great macro [analysis](https://www.youtube.com/watch?v=Dul7G-dVTic){target=\_blank} of the investment in ETH both positive arguments and risks
+- A great macro [analysis](https://www.youtube.com/watch?v=Dul7G-dVTic) of the investment in ETH both positive arguments and risks

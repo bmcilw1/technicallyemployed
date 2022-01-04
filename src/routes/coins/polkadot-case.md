@@ -7,7 +7,7 @@ date: 2021-03-16
 
 ## Overview
 
-1. Polkadot (DOT) presents a fundamental redesign of blockchains and an alternative to smart-contract platforms such as Ethereum. [Gavin Wood](https://en.wikipedia.org/wiki/Gavin_Wood){target=\_blank} is the founder of DOT and was also a co-founder and the original CTO of Ethereum.
+1. Polkadot (DOT) presents a fundamental redesign of blockchains and an alternative to smart-contract platforms such as Ethereum. [Gavin Wood](https://en.wikipedia.org/wiki/Gavin_Wood) is the founder of DOT and was also a co-founder and the original CTO of Ethereum.
 1. Wood believes the future will contain not just one dominant but many differing blockchains. This is primarily based on the observation that no matter how well a general-purpose system is built, eventually it will perform sub-optimally when compared to special-purpose systems in at least some use cases.
 1. DOT's primary focus is to make interoperability between vastly differing blockchains easy. The DOT Layer-0 protocol is like a "federal government" that can support arbitrarily many custom Layer-1 "state governments" called parachains. The DOT protocol has a basic "constitution" outlining how these parachain "states" can interact. It also defines ways that the DOT common "constitution" can be amended by vote as needed without risking a hard-fork in the network. This provides much more flexibility than can be found on more static systems such as Ethereum 1.0 or 2.0.
 1. Specifically, DOT allows parachains to share security and governance solutions across the entire DOT ecosystem. As these are very difficult to implement correctly, sharing these solutions makes them much more likely to be done well. These solutions can be changed on a particular parachain if desired.
@@ -51,5 +51,5 @@ date: 2021-03-16
 
 ## Additional Resources
 
-- [Polkadot website](https://polkadot.network/){target=\_blank}
-- [Polkadot whitepaper](https://polkadot.network/PolkaDotPaper.pdf){target=\_blank}
+- [Polkadot website](https://polkadot.network/)
+- [Polkadot whitepaper](https://polkadot.network/PolkaDotPaper.pdf)
