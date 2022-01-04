@@ -33,11 +33,9 @@
   <a href="https://github.com/mvasigh/sveltekit-mdsvex-blog">View source code on Github.</a>
 </p>
 
-{#each posts as { slug, title, author, description, date }}
+{#each posts as { slug, name, ticker, date }}
   <Article>
-    <ArticleTitle {slug} {title} />
-    <ArticleMeta {author} {date} />
-    <ArticleDescription {description} {slug} />
+    <ArticleTitle {slug} title={name} />
   </Article>
 {/each}
 
