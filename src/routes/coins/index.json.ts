@@ -7,12 +7,6 @@ export async function get({ url }) {
   const postPromises = [];
   const limit = Number(url?.searchParams?.get('limit') ?? Infinity);
 
-  if (Number.isNaN(limit)) {
-    return {
-      status: 400,
-    };
-  }
-
   for (const [path, resolver] of Object.entries(modules)) {
     const slug = slugFromPath(path);
     const promise = resolver().then((post) => ({
