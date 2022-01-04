@@ -16,11 +16,11 @@
 </script>
 
 <script lang="ts">
-  import PageHead from '$lib/components/PageHead.svelte';
-  import Article from '$lib/components/Article.svelte';
-  import ArticleTitle from '$lib/components/ArticleTitle.svelte';
-  import ArticleMeta from '$lib/components/ArticleMeta.svelte';
-  import ArticleDescription from '$lib/components/ArticleDescription.svelte';
+  import PageHead from '$lib/PageHead.svelte';
+  import Article from '$lib/Article.svelte';
+  import ArticleTitle from '$lib/ArticleTitle.svelte';
+  import ArticleMeta from '$lib/ArticleMeta.svelte';
+  import ArticleDescription from '$lib/ArticleDescription.svelte';
 
   export let posts;
 </script>
