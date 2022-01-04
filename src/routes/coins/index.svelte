@@ -6,7 +6,7 @@
   export async function load({ fetch }) {
     // Use a `limit` querystring parameter to fetch a limited number of posts
     // e.g. fetch('posts.json?limit=5') for 5 most recent posts
-    const posts = await fetch('/coins.json').then((res) => res.json());
+    const posts = await fetch('/coins.json').then((res) => res?.json());
 
     return {
       props: {
@@ -26,7 +26,7 @@
   export let posts;
 </script>
 
-<PageHead title="Home" description="An awesome blog about development with Svelte" />
+<!-- <PageHead title="Home" description="An awesome blog about development with Svelte" /> -->
 
 <p>
   This is a minimalistic example of a blog built with <a href="https://kit.svelte.dev">SvelteKit</a>
@@ -34,10 +34,10 @@
   <a href="https://github.com/mvasigh/sveltekit-mdsvex-blog">View source code on Github.</a>
 </p>
 
-{#each posts as { slug, name, ticker, date }}
+<!-- {#each posts as { slug, name, ticker, date }}
   <Article>
     <ArticleTitle {slug} title={name} />
   </Article>
-{/each}
+{/each} -->
 
 <slot />
