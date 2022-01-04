@@ -20,7 +20,7 @@ export async function get({ url }) {
   const posts = await Promise.all(postPromises);
   const publishedPosts = posts.slice(limit);
 
-  publishedPosts.sort((a, b) => (new Date(a.date) > new Date(b.date) ? -1 : 1));
+  publishedPosts.sort((a, b) => (new Date(a?.date) > new Date(b?.date) ? -1 : 1));
 
   return {
     body: publishedPosts,
