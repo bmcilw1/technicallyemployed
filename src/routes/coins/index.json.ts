@@ -3,12 +3,9 @@ import { slugFromPath } from '$lib/util';
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function get({ url }) {
   const modules = import.meta.glob('./*.{md,svx}');
-  return {
-    body: [{name: 'hi'}]
-  }
 
   const postPromises = [];
-  const limit = Number(url.searchParams.get('limit') ?? Infinity);
+  const limit = Number(url?.searchParams?.get('limit') ?? Infinity);
 
   if (Number.isNaN(limit)) {
     return {
