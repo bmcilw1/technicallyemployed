@@ -34,10 +34,10 @@
   <a href="https://github.com/mvasigh/sveltekit-mdsvex-blog">View source code on Github.</a>
 </p>
 
-<!-- {#each posts as { slug, name, ticker, date }}
+{#each posts as { slug, name, ticker, date }}
   <Article>
     <ArticleTitle {slug} title={name} />
   </Article>
-{/each} -->
+{/each}
 
 <slot />
