@@ -1,9 +1,3 @@
-<article>
+<article class="mb-5">
   <slot />
 </article>
-
-<style>
-  article {
-    margin-bottom: calc(var(--spacing-unit) * 8);
-  }
-</style>
