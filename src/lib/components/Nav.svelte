@@ -97,7 +97,8 @@
           class="{$page.path === navItem.href
             ? 'bg-gray-900'
             : 'text-gray-300 hover:bg-gray-700 hover:text-white'} text-white block px-3 py-2 rounded-md text-base font-medium"
-          aria-current="page">{navItem.label}</a
+          aria-current="page"
+          on:click={() => toggleExpandMenu()}>{navItem.label}</a
         >
       {/each}
     </div>
