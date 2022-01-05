@@ -1,3 +1,3 @@
-<article class="mb-5">
+<article>
   <slot />
 </article>
