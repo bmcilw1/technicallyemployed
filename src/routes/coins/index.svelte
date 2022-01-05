@@ -18,7 +18,6 @@
 
 <script lang="ts">
   import PageHead from '$lib/components/PageHead.svelte';
-  import Article from '$lib/components/Article.svelte';
   import ArticleTitle from '$lib/components/ArticleTitle.svelte';
   import ArticleMeta from '$lib/components/ArticleMeta.svelte';
   import ArticleDescription from '$lib/components/ArticleDescription.svelte';
@@ -29,11 +28,11 @@
 <PageHead title="Crypto Coins" description="Interesting crypocurrencies" />
 
 {#each posts as { slug, name, ticker, date }}
-  <Article>
+  <article>
     <ArticleTitle {slug} title={name} />
     <ArticleMeta author="Brian McIlwain" {date} />
     <ArticleDescription description={name} {slug} />
-  </Article>
+  </article>
 {/each}
 
 <slot />
