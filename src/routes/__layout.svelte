@@ -6,7 +6,7 @@
 
 <PageHead description="Technical blog focused software development with cryptocurrency" />
 
-<main>
+<main class="dark">
   <Nav
     navItems={[
       { label: 'Home', href: '/' },

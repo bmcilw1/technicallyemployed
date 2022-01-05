@@ -41,4 +41,6 @@
   <ArticleMeta author={post.name} date={post.date} />
 {/if}
 
-<slot />
+<article class="prose dark:prose-invert">
+  <slot />
+</article>
