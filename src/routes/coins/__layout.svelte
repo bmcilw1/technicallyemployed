@@ -3,7 +3,11 @@
    * @type {import('@sveltejs/kit').Load}
    */
   export async function load({ url, fetch }) {
-    if (!url) return {};
+    if (!url) {
+      console.log('no url');
+
+      return {};
+    }
 
     const post = await fetch(`${url?.pathname}.json`).then((res) => res.json());
 
@@ -27,7 +31,7 @@
   import ArticleTitle from '$lib/components/ArticleTitle.svelte';
   import ArticleMeta from '$lib/components/ArticleMeta.svelte';
 
-  export let post;
+  export let post = null;
 </script>
 
 {#if post}
