@@ -1,4 +1,6 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   h1 {
@@ -20,13 +22,15 @@
     @apply bg-gray-800 text-white;
   }
   p {
-    @apply mb-3
+    @apply mb-3;
+  }
+  article {
+    @apply mb-4;
   }
 }
 
-@tailwind components;
-@tailwind utilities;
-
-.tag {
-  @apply bg-blue-700 text-white text-sm font-medium py-1 px-2 mx-0.5 rounded align-middle;
+@layer components {
+  .tag {
+    @apply bg-blue-700 text-white text-sm font-medium py-1 px-2 mx-0.5 rounded align-middle;
+  }
 }

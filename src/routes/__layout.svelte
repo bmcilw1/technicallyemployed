@@ -1,18 +1,15 @@
 <script>
   import '../app.css';
-  import Nav from '$lib/Nav.svelte';
+  import Nav from '$lib/components/Nav.svelte';
+  import PageHead from '$lib/components/PageHead.svelte';
 </script>
 
-<svelte:head>
-  <title>Technically Employed</title>
-</svelte:head>
+<PageHead description="Technical blog focused software development with cryptocurrency" />
 
-<main>
+<main class="dark">
   <Nav
     navItems={[
       { label: 'Home', href: '/' },
-      { label: 'About', href: '/about' },
-      { label: 'Blog', href: '/blog' },
       { label: 'Coins', href: '/coins' },
     ]}
   />
