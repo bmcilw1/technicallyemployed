@@ -44,7 +44,7 @@
     <div class="container w-full flex flex-wrap place-items-stretch">
       {#if post.previous}
         <a
-          href={post.previous.url}
+          href={`/coins/${post.previous.slug}`}
           class="m-1 p-5 mx-auto sm:px-10 sm:ml-0 border rounded border-gray-200 hover:border-purple-400"
         >
           ← Previous: {post.previous.name}
@@ -52,7 +52,7 @@
       {/if}
       {#if post.next}
         <a
-          href={post.next.url}
+          href={`/coins/${post.next.slug}`}
           class="m-1 p-5 mx-auto sm:px-10 sm:ml-0 border rounded border-gray-200 hover:border-purple-400"
         >
           Next: {post.next.name} →
