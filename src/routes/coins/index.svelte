@@ -7,7 +7,7 @@
     // Use a `limit` querystring parameter to fetch a limited number of posts
     // e.g. fetch('posts.json?limit=5') for 5 most recent posts
     let posts = (await fetch('/coins.json').then((res) => res?.json())) as [{ date: Date }];
-    posts = posts.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+    posts = posts.sort((a, b) => (a.date < b.date ? -1 : 1));
 
     return {
       props: {
