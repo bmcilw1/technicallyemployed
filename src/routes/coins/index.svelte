@@ -26,7 +26,7 @@
 
 <PageHead title="Crypto Coins" description="Interesting crypocurrencies" />
 
-<div class="w-full max-w-2xl grid grid-cols-1 lg:grid-cols-2 gap-4 my-8 px-4 lg:mx-0">
+<div class="w-full mx-auto max-w-2xl grid grid-cols-1 lg:grid-cols-2 gap-4 my-8 px-4">
   {#each posts as { slug, name, ticker }}
     <ArticleBlockLink
       title={name}

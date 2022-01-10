@@ -13,7 +13,7 @@
       { label: 'Coins', href: '/coins' },
     ]}
   />
-  <section class="container max-w-4xl px-6">
+  <section class="container mx-auto px-10">
     <slot />
   </section>
 </main>
