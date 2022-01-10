@@ -34,7 +34,7 @@
   <PageHead title={post.name} description={post.ticker} />
 
   <ArticleTitle title={post.name} />
-  <ArticleMeta author={post.name} date={post.date} />
+  <ArticleMeta author={`The case for ${post.ticker}`} date={post.date} />
   <article class="prose prose-zinc dark:prose-invert">
     <slot />
   </article>
