@@ -2,7 +2,12 @@
   export let author: string;
   export let date: string;
 
-  const formattedDate = new Date(date).toDateString();
+  const formattedDate = new Date(date).toLocaleDateString('en-us', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
 </script>
 
 <p>
