@@ -18,21 +18,17 @@
 
 <script lang="ts">
   import PageHead from '$lib/components/PageHead.svelte';
-  import ArticleTitle from '$lib/components/ArticleTitle.svelte';
-  import ArticleMeta from '$lib/components/ArticleMeta.svelte';
-  import ArticleDescription from '$lib/components/ArticleDescription.svelte';
+  import ArticleBlockLink from '$lib/components/ArticleBlockLink.svelte';
 
-  export let posts;
+  export let posts = [];
 </script>
 
 <PageHead title="Crypto Coins" description="Interesting crypocurrencies" />
 
-{#each posts as { slug, name, ticker, date }}
-  <article>
-    <ArticleTitle {slug} title={name} />
-    <ArticleMeta author="Brian McIlwain" {date} />
-    <ArticleDescription description={name} {slug} />
-  </article>
-{/each}
+<div class="w-full max-w-2xl grid grid-cols-1 lg:grid-cols-2 gap-4 my-8 px-4 lg:mx-0">
+  {#each posts as { slug, name, ticker }}
+    <ArticleBlockLink title={name} description={`The case for ${ticker}`} url={`/coins/${slug}`} />
+  {/each}
+</div>
 
 <slot />
