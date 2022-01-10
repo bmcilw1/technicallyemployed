@@ -45,7 +45,7 @@
       {#if post.previous}
         <a
           href={`/coins/${post.previous.slug}`}
-          class="m-1 p-5 mx-auto sm:px-10 sm:ml-0 border rounded border-gray-200 hover:border-purple-400"
+          class="m-1 p-5 mx-auto sm:px-10 sm:ml-0 border rounded border-gray-200 hover:border-purple-400 text-slate-300"
         >
           ← Previous: {post.previous.name}
         </a>
@@ -53,7 +53,7 @@
       {#if post.next}
         <a
           href={`/coins/${post.next.slug}`}
-          class="m-1 p-5 mx-auto sm:px-10 sm:ml-0 border rounded border-gray-200 hover:border-purple-400"
+          class="m-1 p-5 mx-auto sm:px-10 sm:mr-0 sm:ml-auto border rounded border-gray-200 hover:border-purple-400 text-slate-300"
         >
           Next: {post.next.name} →
         </a>
