@@ -12,5 +12,5 @@
 
 <p>
   <span class="font-bold">{author}</span>
-  <span>{formattedDate}</span>
+  <span> • <time>{formattedDate}</time></span>
 </p>
