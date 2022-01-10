@@ -26,6 +26,7 @@
   import PageHead from '$lib/components/PageHead.svelte';
   import ArticleTitle from '$lib/components/ArticleTitle.svelte';
   import ArticleMeta from '$lib/components/ArticleMeta.svelte';
+  import ArticleNextPrevious from '$lib/components/ArticleNextPrevious.svelte';
 
   export let post = null;
 </script>
@@ -41,24 +42,12 @@
     <article class="prose prose-zinc dark:prose-invert mx-5">
       <slot />
     </article>
-    <div class="container w-full flex flex-wrap place-items-stretch">
-      {#if post.previous}
-        <a
-          href={`/coins/${post.previous.slug}`}
-          class="m-1 p-5 mx-auto sm:px-10 sm:ml-0 border rounded border-gray-200 hover:border-purple-400 text-slate-300"
-        >
-          ← Previous: {post.previous.name}
-        </a>
-      {/if}
-      {#if post.next}
-        <a
-          href={`/coins/${post.next.slug}`}
-          class="m-1 p-5 mx-auto sm:px-10 sm:mr-0 sm:ml-auto border rounded border-gray-200 hover:border-purple-400 text-slate-300"
-        >
-          Next: {post.next.name} →
-        </a>
-      {/if}
-    </div>
+    <ArticleNextPrevious
+      next={post.next ? { name: post.next?.name, url: `/coins/${post.next?.slug}` } : null}
+      previous={post.previous
+        ? { name: post.previous?.name, url: `/coins/${post.previous?.slug}` }
+        : null}
+    />
   </div>
 {:else}
   <slot />
