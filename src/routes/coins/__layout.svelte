@@ -33,9 +33,11 @@
 {#if post}
   <PageHead title={post.name} description={post.ticker} />
 
-  <ArticleTitle title={post.name} />
-  <ArticleMeta author={`The case for ${post.ticker}`} date={post.date} />
-  <article class="prose prose-zinc dark:prose-invert">
+  <div class="pb-5 mb-5 border-b border-gray-100 text-center">
+    <ArticleTitle title={post.name} />
+    <ArticleMeta author={`The case for ${post.ticker}`} date={post.date} />
+  </div>
+  <article class="prose prose-zinc dark:prose-invert mx-5">
     <slot />
   </article>
 {:else}
