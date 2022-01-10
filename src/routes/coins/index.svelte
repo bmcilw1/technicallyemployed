@@ -27,7 +27,12 @@
 
 <div class="w-full max-w-2xl grid grid-cols-1 lg:grid-cols-2 gap-4 my-8 px-4 lg:mx-0">
   {#each posts as { slug, name, ticker }}
-    <ArticleBlockLink title={name} description={`The case for ${ticker}`} url={`/coins/${slug}`} />
+    <ArticleBlockLink
+      title={name}
+      description={`The case for `}
+      accentDescription={ticker}
+      url={`/coins/${slug}`}
+    />
   {/each}
 </div>
 
