@@ -24,7 +24,7 @@ export async function get({ params }) {
   const postPromises = [];
   for (const [path, resolver] of Object.entries(modules)) {
     const slug = slugFromPath(path);
-    postPromises.push([slug, resolver]);
+    postPromises.push([path, slug, resolver]);
   }
 
   const posts = await Promise.all(postPromises);
