@@ -1,8 +1,6 @@
 import { slugFromPath } from '$lib/util';
 
-/**
- * @type {import('@sveltejs/kit').RequestHandler}
- */
+/** @type {import('@sveltejs/kit').RequestHandler} */
 export async function get({ params }) {
   const modules = import.meta.glob(`./*.{md,svx}`);
 
