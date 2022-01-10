@@ -6,8 +6,7 @@
   export async function load({ fetch }) {
     // Use a `limit` querystring parameter to fetch a limited number of posts
     // e.g. fetch('posts.json?limit=5') for 5 most recent posts
-    let posts = (await fetch('/coins.json').then((res) => res?.json())) as [{ date: Date }];
-    posts = posts.sort((a, b) => (a.date < b.date ? -1 : 1));
+    const posts = await fetch('/coins.json').then((res) => res?.json());
 
     return {
       props: {
@@ -26,7 +25,9 @@
 
 <PageHead title="Crypto Coins" description="Interesting crypocurrencies" />
 
-<div class="w-full mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-8 px-4">
+<div
+  class="w-full mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-8 px-4"
+>
   {#each posts as { slug, name, ticker }}
     <ArticleBlockLink
       title={name}
