@@ -1,4 +1,4 @@
 ---
 items:
   - text: Coins
-    url: "/coins"
+    url: '/coins'
