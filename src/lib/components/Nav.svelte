@@ -76,7 +76,7 @@
             {#each navItems as navItem}
               <a
                 href={navItem.href}
-                class="{$page.path === navItem.href
+                class="{$page.url.pathname === navItem.href
                   ? 'bg-gray-900'
                   : 'text-gray-300 hover:bg-gray-700 hover:text-white'} text-white px-3 py-2 rounded-md text-sm font-medium"
                 aria-current="page">{navItem.label}</a
@@ -94,7 +94,7 @@
       {#each navItems as navItem}
         <a
           href={navItem.href}
-          class="{$page.path === navItem.href
+          class="{$page.url.pathname === navItem.href
             ? 'bg-gray-900'
             : 'text-gray-300 hover:bg-gray-700 hover:text-white'} text-white block px-3 py-2 rounded-md text-base font-medium"
           aria-current="page"

@@ -2,10 +2,10 @@
   /**
    * @type {import('@sveltejs/kit').Load}
    */
-  export async function load({ fetch, page }) {
-    if (page?.path === '/coins') return {};
+  export async function load({ fetch, url }) {
+    if (url.pathname === '/coins') return {};
 
-    const post = await fetch(`${page?.path}.json`).then((res) => res.json());
+    const post = await fetch(`${url.pathname}.json`).then((res) => res.json());
 
     if (!post) {
       return {
