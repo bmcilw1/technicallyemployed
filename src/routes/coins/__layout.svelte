@@ -5,7 +5,7 @@
   export async function load({ fetch, url }) {
     if (url.pathname === '/coins') return {};
 
-    const post = await fetch(`${url.pathname}.json`).then((res) => res.json());
+    const post = await fetch(`${url.pathname}.json`).then((res: { json: () => any }) => res.json());
 
     if (!post) {
       return {

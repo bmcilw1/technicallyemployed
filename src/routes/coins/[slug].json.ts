@@ -4,11 +4,15 @@ import { slugFromPath } from '$lib/util';
 export async function get({ params }) {
   const modules = import.meta.glob('./*.{md,svx}');
 
-  let match;
+  let match: {
+    path: string;
+    slug: string;
+    resolver: any;
+  };
   for (const [path, resolver] of Object.entries(modules)) {
     const slug = slugFromPath(path);
     if (slug === params.slug) {
-      match = [path, slug, resolver];
+      match = { path, slug, resolver };
       break;
     }
   }
@@ -19,7 +23,7 @@ export async function get({ params }) {
     };
   }
 
-  const post = await match[2]();
+  const post = await match.resolver();
 
   const postPromises = [];
   for (const [path, resolver] of Object.entries(modules)) {
