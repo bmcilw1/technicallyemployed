@@ -79,9 +79,9 @@
               <a
                 data-testid={`nav-item-${navItem.label.toLowerCase()}`}
                 href={navItem.href}
-                class="{$page.url.pathname === navItem.href
-                  ? 'bg-gray-900'
-                  : 'text-gray-300 hover:bg-gray-700 hover:text-white'} text-white px-3 py-2 rounded-md text-sm font-medium"
+                class="hover:bg-gray-700 hover:text-white text-gray-300 px-3 py-2 rounded-md text-sm font-medium"
+                class:activated={$page.url.pathname === navItem.href}
+                class:bg-gray-900={$page.url.pathname === navItem.href}
                 aria-current="page">{navItem.label}</a
               >
             {/each}
