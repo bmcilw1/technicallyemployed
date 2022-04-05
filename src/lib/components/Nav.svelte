@@ -69,12 +69,15 @@
       </div>
       <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
         <div class="flex-shrink-0 flex items-center">
-          <a href="/" class="text-indigo-500 font-bold text-lg">Technically Employed</a>
+          <a href="/" class="text-indigo-500 font-bold text-lg" data-testid="logo"
+            >Technically Employed</a
+          >
         </div>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-4">
             {#each navItems as navItem}
               <a
+                data-testid={`nav-item-${navItem.label.toLowerCase()}`}
                 href={navItem.href}
                 class="{$page.url.pathname === navItem.href
                   ? 'bg-gray-900'

@@ -12,7 +12,7 @@ const config = {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-    {
+    /*
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
@@ -20,10 +20,11 @@ const config = {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
+    */
   ],
-  // webServer: {
-  //   command: 'npm run build && npm run preview',
-  //   port: 3000,
-  // },
+  webServer: {
+    command: 'npm run build && npm run preview',
+    port: 3000,
+  },
 };
 export default config;
