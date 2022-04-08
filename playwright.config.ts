@@ -12,15 +12,20 @@ const config: import('@playwright/test').PlaywrightTestConfig = {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-    /*
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+    {
+      name: 'Pixel 4',
+      use: {
+        browserName: 'chromium',
+        ...devices['Pixel 4'],
+      },
     },
     {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      name: 'iPhone 11',
+      use: {
+        browserName: 'webkit',
+        ...devices['iPhone 11'],
+      },
     },
-    */
   ],
   webServer: {
     command: 'npm run build && npm run preview',
