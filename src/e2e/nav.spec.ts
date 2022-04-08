@@ -7,7 +7,7 @@ test.describe('Nav', () => {
     await page.goto(url);
   });
 
-  test('Highlights activated item', async ({ page }) => {
+  test('Visits links and highlights activated item', async ({ page }) => {
     const logo = page.locator('[data-testid=logo]');
     const homeLink = page.locator('[data-testid=nav-item-home]');
     const coinsLink = page.locator('[data-testid=nav-item-coins]');
@@ -19,9 +19,11 @@ test.describe('Nav', () => {
     await coinsLink.click();
     await expect(coinsLink).toHaveClass(/activated/);
     await expect(homeLink).not.toHaveClass(/activated/);
+    expect(page.url()).toContain('coins');
 
     await logo.click();
     await expect(homeLink).toHaveClass(/activated/);
     await expect(coinsLink).not.toHaveClass(/activated/);
+    expect(page.url()).not.toContain('coins');
   });
 });
