@@ -15,12 +15,14 @@ test.describe('Nav', () => {
 
     await expect(logo).toHaveText('Technically Employed');
 
+    // Default state home
     if (isMobile) await mobileMenuButton.click();
     await expect(homeLink).toHaveClass(/activated/);
     await expect(coinsLink).not.toHaveClass(/activated/);
 
     await coinsLink.click();
 
+    // Coins is active
     if (isMobile) await mobileMenuButton.click();
     await expect(coinsLink).toHaveClass(/activated/);
     await expect(homeLink).not.toHaveClass(/activated/);
@@ -28,9 +30,18 @@ test.describe('Nav', () => {
 
     await logo.click();
 
+    // Home is active again
     if (isMobile) await mobileMenuButton.click();
     await expect(homeLink).toHaveClass(/activated/);
     await expect(coinsLink).not.toHaveClass(/activated/);
     expect(page.url()).not.toContain('coins');
+
+    // Menu opens and closes
+    if (isMobile) {
+      await mobileMenuButton.click();
+      await expect(coinsLink).toBeVisible();
+      await mobileMenuButton.click();
+      await expect(coinsLink).not.toBeVisible();
+    }
   });
 });
