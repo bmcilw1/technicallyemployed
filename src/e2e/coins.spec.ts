@@ -9,7 +9,7 @@ test.describe('Coins', () => {
 
   test('Shows and visits links', async ({ page }) => {
     const btcLink = page.locator(`[data-testid=link-btc]`);
-    await Promise.all([page.waitForNavigation({ url: '**/bitcoin*' }), await btcLink.click()]);
+    await Promise.all([page.waitForNavigation({ url: '**/bitcoin' }), await btcLink.click()]);
     expect(page.url()).toContain('bitcoin');
   });
 });
