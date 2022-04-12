@@ -16,8 +16,9 @@
         <button
           type="button"
           class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-          aria-controls="mobile-menu"
+          aria-controls="mobile-menu-button"
           aria-expanded="false"
+          data-testid="mobile-menu-button"
           on:click={() => toggleExpandMenu()}
         >
           <span class="sr-only">Open main menu</span>
@@ -96,10 +97,11 @@
     <div class="px-2 pt-2 pb-3 space-y-1">
       {#each navItems as navItem}
         <a
+          data-testid={`nav-item-${navItem.label.toLowerCase()}-mobile`}
           href={navItem.href}
-          class="{$page.url.pathname === navItem.href
-            ? 'bg-gray-900'
-            : 'text-gray-300 hover:bg-gray-700 hover:text-white'} text-white block px-3 py-2 rounded-md text-base font-medium"
+          class="hover:bg-gray-700 hover:text-white text-gray-300 px-3 py-2 rounded-md text-sm font-medium"
+          class:activated={$page.url.pathname === navItem.href}
+          class:bg-gray-900={$page.url.pathname === navItem.href}
           aria-current="page"
           on:click={() => toggleExpandMenu()}>{navItem.label}</a
         >
