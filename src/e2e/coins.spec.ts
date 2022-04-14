@@ -10,6 +10,13 @@ test.describe('Coins', () => {
   test('Shows and visits links', async ({ page, request }) => {
     const coins = await (await request.get(`http://${url}.json`)).json();
 
+    // All are shown
+    for (const coin of coins) {
+      const coinLink = page.locator(`[data-testid=link-${coin.ticker.toLowerCase()}]`);
+      await expect(coinLink).toBeVisible();
+    }
+
+    // Links work
     const coinLink = page.locator(`[data-testid=link-${coins[0].ticker.toLowerCase()}]`);
     await Promise.all([
       page.waitForNavigation({ url: `**/${coins[0].slug}` }),
