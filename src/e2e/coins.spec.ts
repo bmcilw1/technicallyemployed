@@ -8,8 +8,7 @@ test.describe('Coins', () => {
   });
 
   test('Shows and visits links', async ({ page, request }) => {
-    const coinsRequest = await request.get(`http://${url}.json`);
-    const coins = await coinsRequest.json();
+    const coins = await (await request.get(`http://${url}.json`)).json();
 
     const coinLink = page.locator(`[data-testid=link-${coins[0].ticker.toLowerCase()}]`);
     await Promise.all([
