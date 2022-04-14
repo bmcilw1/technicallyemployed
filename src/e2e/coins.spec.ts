@@ -7,9 +7,15 @@ test.describe('Coins', () => {
     await page.goto(url);
   });
 
-  test('Shows and visits links', async ({ page }) => {
-    const btcLink = page.locator(`[data-testid=link-btc]`);
-    await Promise.all([page.waitForNavigation({ url: '**/bitcoin*' }), await btcLink.click()]);
-    expect(page.url()).toContain('bitcoin');
+  test('Shows and visits links', async ({ page, request }) => {
+    const coinsRequest = await request.get(`http://${url}.json`);
+    const coins = await coinsRequest.json();
+
+    const coinLink = page.locator(`[data-testid=link-${coins[0].ticker.toLowerCase()}]`);
+    await Promise.all([
+      page.waitForNavigation({ url: `**/${coins[0].slug}` }),
+      await coinLink.click(),
+    ]);
+    expect(page.url()).toContain(coins[0].slug);
   });
 });
