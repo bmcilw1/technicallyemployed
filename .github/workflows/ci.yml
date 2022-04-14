@@ -39,7 +39,7 @@ jobs:
         run: npm ci
       - name: Run lint
         run: npm run lint
-  check:
+  svelte-check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
