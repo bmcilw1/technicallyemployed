@@ -31,24 +31,26 @@
   export let post = null;
 </script>
 
-{#if post}
-  <PageHead title={post.name} description={post.ticker} />
+<section class="container mx-auto px-10">
+  {#if post}
+    <PageHead title={post.name} description={post.ticker} />
 
-  <div class="container mx-auto max-w-screen-md">
-    <div class="pb-5 mb-5 border-b border-gray-100 text-center">
-      <ArticleTitle title={post.name} />
-      <ArticleMeta author={`The case for ${post.ticker}`} date={post.date} />
+    <div class="container mx-auto max-w-screen-md">
+      <div class="pb-5 mb-5 border-b border-gray-100 text-center">
+        <ArticleTitle title={post.name} />
+        <ArticleMeta author={`The case for ${post.ticker}`} date={post.date} />
+      </div>
+      <article class="prose prose-zinc dark:prose-invert mx-5">
+        <slot />
+      </article>
+      <ArticleNextPrevious
+        next={post.next ? { name: post.next?.name, url: `/coins/${post.next?.slug}` } : null}
+        previous={post.previous
+          ? { name: post.previous?.name, url: `/coins/${post.previous?.slug}` }
+          : null}
+      />
     </div>
-    <article class="prose prose-zinc dark:prose-invert mx-5">
-      <slot />
-    </article>
-    <ArticleNextPrevious
-      next={post.next ? { name: post.next?.name, url: `/coins/${post.next?.slug}` } : null}
-      previous={post.previous
-        ? { name: post.previous?.name, url: `/coins/${post.previous?.slug}` }
-        : null}
-    />
-  </div>
-{:else}
-  <slot />
-{/if}
+  {:else}
+    <slot />
+  {/if}
+</section>
