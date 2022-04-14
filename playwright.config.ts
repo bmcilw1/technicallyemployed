@@ -4,6 +4,7 @@ import { devices } from '@playwright/test';
 const config: import('@playwright/test').PlaywrightTestConfig = {
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
+  timeout: 10 * 1000,
   use: {
     trace: 'on-first-retry',
   },
