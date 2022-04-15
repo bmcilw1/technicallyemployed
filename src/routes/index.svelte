@@ -2,9 +2,8 @@
   import profilePic from '/static/img/FormalProfessionalPic.jpg';
 </script>
 
-<img src={profilePic} alt="Professional profile picture" />
-
-<section data-source={profilePic} class="relative bg-none z-0 h-screen">
+<img src={profilePic} alt="Professional profile" />
+<section class="relative bg-none z-0 h-screen">
   <h1>Tinkerings of a Software Enginner</h1>
 </section>
 
