@@ -3,6 +3,7 @@
 </script>
 
 <img src={profilePic} alt="Professional profile" />
+
 <section class="relative bg-none z-0 h-screen">
   <h1>Tinkerings of a Software Enginner</h1>
 </section>
