@@ -28,6 +28,7 @@
       class="flex-shrink-0 bg-pink-400 border border-pink-400 hover:bg-transparent hover:text-pink-400 text-white py-1 px-2 rounded disabled:opacity-50"
       type="submit"
       disabled={!isValidEmail(email)}
+      data-testid="submit-newsletter-signup"
     >
       Join Newsletter
     </button>
