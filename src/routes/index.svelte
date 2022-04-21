@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import NewsletterSignUp from '$lib/components/NewsletterSignUp.svelte';
 </script>
 
