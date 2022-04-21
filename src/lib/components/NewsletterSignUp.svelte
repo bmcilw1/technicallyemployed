@@ -1,5 +1,5 @@
 <script lang="ts">
-  let email: string = '';
+  let email = '';
 
   function isValidEmail(s: string) {
     const emailRegex =
