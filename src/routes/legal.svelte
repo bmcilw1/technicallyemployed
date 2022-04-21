@@ -20,6 +20,3 @@
     strictly rely on this source as from time to time there may be errors.
   </p>
 </section>
-
-<!-- Suppress slot warning https://github.com/sveltejs/kit/issues/981 -->
-{#if false}<slot />{/if}
