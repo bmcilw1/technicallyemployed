@@ -1,3 +1,7 @@
+<script>
+  import NewsletterSignUp from '$lib/components/NewsletterSignUp.svelte';
+</script>
+
 <section id="home" class="container mx-auto h-screen flex flex-col justify-center items-center">
   <h1>
     <strong
@@ -15,4 +19,8 @@
       <span class="text-purple-400 font-bold">crypto</span></span
     >
   </p>
+
+  <div class="p-2">
+    <NewsletterSignUp />
+  </div>
 </section>
