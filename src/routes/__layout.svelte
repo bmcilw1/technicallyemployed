@@ -10,6 +10,7 @@
   <Nav
     navItems={[
       { label: 'Home', href: '/' },
+      { label: 'About', href: '/about' },
       { label: 'Coins', href: '/coins' },
     ]}
   />
