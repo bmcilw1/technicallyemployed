@@ -16,6 +16,3 @@
     >
   </p>
 </section>
-
-<!-- Suppress slot warning https://github.com/sveltejs/kit/issues/981 -->
-{#if false}<slot />{/if}
