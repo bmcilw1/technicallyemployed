@@ -8,6 +8,7 @@
   <a
     href="../"
     class="flex-shrink-0 bg-purple-700 no-underline hover:border-purple-700 border text-white py-1 px-6 rounded"
+    data-testid="acknowledge-newsletter-signup-success"
   >
     Ok!
   </a>
