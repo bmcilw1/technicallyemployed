@@ -10,7 +10,10 @@
       class="h-32 w-32 overflow-hidden rounded-full"
     />
     <div class="p-5">
-      <h1>Tinkerings of a Software Enginner</h1>
+      <h1>About Me</h1>
     </div>
+  </div>
+  <div class="p-5">
+    <p>Hi there!</p>
   </div>
 </section>
